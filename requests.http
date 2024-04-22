@@ -1,0 +1,45 @@
+# примеры API-запросов
+
+@baseUrl = http://127.0.0.1:8000/api/v1
+
+
+# Авторизация пользователя
+POST {{baseUrl}}/user/authorization
+Content-Type: application/json
+
+{
+  "username": "CHEER",
+  "phone": 55643346648,
+  "password":"che11ckuuu",
+  "invite_code": "qeodec"
+}
+
+###
+
+# Подтверждение(ввод данных с телефона)
+POST {{baseUrl}}/user/confirm
+Content-Type: application/json
+
+{
+"code": "jghhggj"
+}
+
+###
+
+# Получение данных аккаунта
+GET {{baseUrl}}/user/detail_account
+Content-Type: application/json
+
+{
+  "phone": "5564334648"
+}
+###
+
+# Получение данных приглашенных аккаунтов
+GET {{baseUrl}}/user/detail_account/invited
+Content-Type: application/json
+
+{
+  "phone": "556433467448"
+}
+###
